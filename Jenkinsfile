@@ -4,10 +4,9 @@ pipeline {
     stages {
 
         stage('Checkout') {
-    steps {
-        git branch: 'main', url: 'https://github.com/Jitisha320/Jenkins-Website-Deploy.git'
-    }
-}
+            steps {
+                git branch: 'main', url: 'https://github.com/Jitisha320/Jenkins-Website-Deploy.git'
+            }
         }
 
         stage('Deploy') {
@@ -19,5 +18,6 @@ pipeline {
                 '''
             }
         }
+
     }
 }
