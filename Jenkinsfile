@@ -12,9 +12,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    sudo rm -rf /var/www/html/*
-                    sudo cp index.html style.css script.js /var/www/html/
-                    sudo systemctl restart apache2
+                    rm -rf /var/www/html/*
+                    cp index.html style.css script.js /var/www/html/
                 '''
             }
         }
